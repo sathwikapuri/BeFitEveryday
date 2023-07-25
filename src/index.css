@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;1,200&family=Ubuntu&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    border:0;
+    outline:0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --color-bg:#1f1f38;
+    --color-bg-variant:#2c2c6c;
+    --color-primary:#4db5ff;
+    --color-primary-variant:rgba(77,181,255,0.4);
+    --color-white:#fff;
+    --color-light:rgba(255,255,255,0.6);
+    --container-width-lg:75%;
+    --container-width-md:86%;
+    --container-width-ms:90%;
+      --transition:all 500ms ease;
+
+}
+html,body{overflow-y: scroll; }
+body{
+    font-family: "Poppins",sans-serif;
+    background: var(--color-bg);
+    color:var(--color-white);
+    line-height: 1.7;
+    overflow: hidden;
+    scroll-behavior: smooth;
+   
+}
+.container{
+    width:var(--container-width-lg);
+    margin:0 auto;
+}
+
+h1,h2,h3,h4,h5{
+    font-weight: 500;
+}
+html
+ {
+   overflow-y: scroll;
+ }
+
+h1{
+    font-size: 2.5rem;
+}
+section{
+    margin-top:5rem;
+    height:100%;
+}
+section > h2,section > h5{
+    text-align: center;
+    color: var(--color-primary);
+}
+.text-light{
+    color:var(--color-light);
+}
+a{
+    color:white;
+    transition: all 400ms ease;
+
+}
+a:hover{
+    color:var(--color-white);
+}
+.btn{
+    width:max-content;
+    display: inline-block;
+    padding: 0.75rem 1.2rem;
+    color:var(--color-primary);
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border:1px solid var(--color-primary);
+
+}
+.btn:hover{
+    background: var(--color-white);
+    color:var(--color-bg);
+    border-radius: transparent;
+}
+.btn-primary{
+    background: var(--color-primary);
+    color:var(--color-bg);
+}
+
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+.header{
+    margin-top: 5rem;
+    height: 20rem;
+    overflow: hidden;
+    border-bottom: 2px solid gray;
+}
+.header_container{
+    width: 100%;
+    height:100%;
+    position: relative;
+    display: grid;
+    place-items: center;
+    background: black;
+}
+.header_container-bg{
+    position: absolute;
+    width: 100%;
+}
+.header_container-bg img{
+    opacity: 0.5;
+}
+.header_content{
+    position: relative;
+    width:44%;
+    margin: 0 auto;
+    text-align: center;
+    color:var(--color-light);
+}
+.header_content p{
+    color: rgba(255,255,255,0.7);
+}
+@media screen and (max-width:1024px) {
+    .container{
+        width:var(--container-width-md);
+
+    }
+    section{
+        margin-top:6rem;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.6rem;
+    }
+    .header_content{
+        width: 76%;
+    }
+
+}
+@media screen and (max-width:600px) {
+    .container{
+        width: var(--container-width-ms);
+
+    }
+    section > h2{
+        margin-bottom: 2rem;
+    }
+    h1{
+        font-size: 2.2rem;
+        line-height: 1.3;
+    }
+    .header{
+        height: fit-content;
+    }
+    section{
+        margin-top: 7rem;
+    }
+    .header_content{
+
+        width: var(--container-width-md);
+        padding: 3rem 0;
+    }
+    .header_content p{
+        font-size: 0.85rem;
+    }
+
+}
+.btn{
+    color: var(--color-light);
+    width: fit-content;
+    margin: 0 auto;
+    padding:0.9rem 2rem;
+    background:var(--color-primary);
+    border-radius: 1.5rem;
+    transition: var(--transition);
+}
+.btn:hover{
+    background-color: black;
+    color: white;
+}
+.btn.lg{
+    padding: 1.2rem 3rem;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+}
+.btn.sm{
+    padding:0.4rem 1.2rem;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+}
+section{
+    margin-top: 8rem;
+}
+.programs_head{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+}
+.programs span{
+    background: gray;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    color:var(--color-secondary);
+
+
+}
+.card{
+    background:var(--color-bg-variant);
+    border: 2px solid transparent;
+    text-align: center;
+    padding: 2rem 1.5rem;
+
+    border-radius: 0 3rem 0 3rem;
+    transition: var(--transition);
+}
+.card:hover{
+    background: transparent;
+    border-color: gray;
+    cursor: default;
+}
+.card span{
+    width: 3rem;
+    height: 3rem;
+    background: var(--color-primary);
+    color: gray;
+    font-size: 1.2rem;
+    padding: 0.6rem;
+    display: grid;
+    place-items: center;
+    margin-bottom: 1.5rem;
+    margin-inline: auto;
+    border-radius: 1rem;
+    transition: var(--transition);
+}
+.card:hover span{
+    background: var(--color-secondary);
+    color: gray;
+
+}
+.card small{
+    margin-top: 1rem;
+    display: block;
+    font-weight: 300;
+}
